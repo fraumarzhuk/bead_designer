@@ -197,7 +197,7 @@ function drawSchema(){
     sctx.fillStyle = '#5d6a61';
     sctx.font = '13px -apple-system, sans-serif';
     sctx.textAlign = 'center';
-    sctx.fillText('Click "+ Add bead" to place your first bead', w/2, h/2);
+    sctx.fillText('click "+ add bead" to place your first bead', w/2, h/2);
     return;
   }
 
@@ -300,7 +300,7 @@ function renderInspector(){
   if(ids.length===0){
     inspector.innerHTML = state.beads.length
       ? '<span class="empty">click beads to select them, then add / Connect / delete. click empty space to clear selection.</span>'
-      : '<span class="empty">Click "+ add bead" to place your first bead.</span>';
+      : '<span class="empty">click "+ add bead" to place your first bead.</span>';
     return;
   }
   const first = findBead(ids[0]);

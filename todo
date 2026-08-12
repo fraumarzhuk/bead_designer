@@ -1,0 +1,16 @@
+1. select changes the state select/unselect
+2. add colors palette (up to 10 reusable colors?)
+3. add steps 
+4. add toggle to display beads' individual numbers
+5. schema zoom in zoom out
+6. save to local storage 
+7. export schema (jpg, png)
+
+
+6. each bead is an element -> left click shows properties and they can be modified from toggle(?) (color, size)
+
+advanced:
+
+1. select beads on 3d preview and modify in schema?
+2. autocorrect elements of 4-5-6 for more symmetrical shape?
+3. add AI convertion of ready schemas into 3D?
