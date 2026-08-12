@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bead Schema Studio — physics prototype</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>bead schema studio</h1>
+    <div class="sub">click beads to select, then add, connect, delete</div>
+  </div>
+  <div class="toolbar">
+    <label>New bead <input type="color" id="defaultColor" value="#5aa9c7"></label>
+    <label>Size <input type="range" id="defaultSize" min="1" max="8" step="0.5" value="3"><span id="defaultSizeVal">3 mm</span></label>
+    <button class="primary" id="addBeadBtn">+ add bead</button>
+    <div class="divider"></div>
+    <button id="connectBtn" disabled>connect selected</button>
+    <button id="deleteBtn" class="danger" disabled>delete selected</button>
+    <div class="divider"></div>
+    <button id="resetPhysicsBtn">reset physics</button>
+  </div>
+</header>
+
+<main>
+  <div id="schema-pane">
+    <div class="panel-label">schema — click beads to select · drag to reposition</div>
+    <canvas id="schemaCanvas"></canvas>
+  </div>
+  <div id="view-pane">
+    <div class="panel-label">3D preview — drag to rotate, scroll to zoom</div>
+    <div id="hint">live physics relaxation</div>
+    <canvas id="threeCanvas"></canvas>
+    <div id="empty-3d">add your first bead on the left<br>to see it take shape here.</div>
+  </div>
+</main>
+
+<div id="inspector"><span class="empty">click "+ add bead" to place your first bead.</span></div>
+
+<script src="./index.js"/>
+</body>
+</html>
