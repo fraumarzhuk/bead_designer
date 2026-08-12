@@ -281,6 +281,7 @@ function toggleSelect(id){
     const b = findBead(id);
     if(b){
       document.getElementById('defaultColor').value = b.color;
+	  document.getElementById('bgColor').value = b.color;
       document.getElementById('defaultSize').value = b.size;
       document.getElementById('defaultSizeVal').textContent = b.size+' mm';
     }
@@ -333,6 +334,8 @@ const threeCanvas = document.getElementById('threeCanvas');
 const emptyLabel = document.getElementById('empty-3d');
 const renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, antialias:true, alpha:true });
 const scene = new THREE.Scene();
+const bgPicker = document.getElementById('bgColor');
+scene.background = new THREE.Color(bgPicker.value);
 const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 2000);
 scene.add(new THREE.AmbientLight(0xffffff, 0.55));
 const dLight = new THREE.DirectionalLight(0xffffff, 0.9);
@@ -397,6 +400,10 @@ function updateCamera(){
   camera.position.z = camDist*Math.cos(camAngleY)*Math.cos(camAngleX);
   camera.lookAt(0,0,0);
 }
+
+bgPicker.addEventListener('input', (e) => {
+    scene.background = new THREE.Color(e.target.value);
+});
 
 threeCanvas.addEventListener('mousedown', e=>{ dragging=true; lastX=e.clientX; lastY=e.clientY; });
 window.addEventListener('mouseup', ()=> dragging=false);

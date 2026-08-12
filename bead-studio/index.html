@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Bead Schema Studio — physics prototype</title>
+<title>bead schema studio — physics prototype</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <link rel="stylesheet" href="styles.css" />
 
@@ -15,7 +15,7 @@
     <div class="sub">click beads to select, then add, connect, delete</div>
   </div>
   <div class="toolbar">
-    <label>New bead <input type="color" id="defaultColor" value="#5aa9c7"></label>
+    <label>new bead <input type="color" id="defaultColor" value="#5aa9c7"></label>
     <label>Size <input type="range" id="defaultSize" min="1" max="8" step="0.5" value="3"><span id="defaultSizeVal">3 mm</span></label>
     <button class="primary" id="addBeadBtn">+ add bead</button>
     <div class="divider"></div>
@@ -23,6 +23,7 @@
     <button id="deleteBtn" class="danger" disabled>delete selected</button>
     <div class="divider"></div>
     <button id="resetPhysicsBtn">reset physics</button>
+	<label>bg color <input type="color" id="bgColor" value="#000000"></label>
   </div>
 </header>
 
